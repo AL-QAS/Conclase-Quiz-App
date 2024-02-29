@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+:root {
+    --color-pure-white: #ffffff;
+    --color-light-gray: #f4f6fa;
+    --color-light-bluish: #abc1e1;
+    --color-grey-navy: #626c7f;
+    --color-navy: #3b4d66;
+    --color-dark-navy: #313e51;
+    --color-red: #ee5454;
+    --color-light-orange: #fff1e9;
+    --color-light-green: #e0fdef;
+    --color-green: #26d782;
+    --color-light-blue: #ebf0ff;
+    --color-light-purple: #f6e7ff;
+    --color-purple: #d394fa;
+    --color-dark-purple: #a729f5;
+  
+    --pattern-body-bg: url("/images/patterns/bg-mobile-light.svg");
+  
+    --shadow: 0 16px 40px 0 hsla(220, 29%, 66%, 14%);
+  
+    --color-body-bg: var(--color-light-gray);
+    --color-body-text: var(--color-dark-navy);
+    --color-toggle: var(--color-grey-navy);
+    --color-info: var(--color-grey-navy);
+    --color-item-bg: var(--color-pure-white);
+
+     /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Rubik", sans-serif;
+    --font-size: 1.4rem;
+    
+  
+    /*========== Font weight ==========*/
+    --font-regular: 300;
+    --font-semi-bold: 500;
+    --font-very-bold: 700;
+ /*========== radio style ==========*/
+    --radio-border-color: #8b8c89;
+    --radio-checked-color: #274c77;
+    --radio-hover-color: #a3cef1;
+    --radio-disabled-bg-color: #d9d9d9;
+  }
+  
+  body{
+    background-image: url('assets/frontend-mentor-frontend-quiz-app/images/patterns/bg-desktop-light.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding-inline: 5rem;
+    font-family: var(--body-font);
+  }
+
+  .header h1{
+    font-size: 6.4rem;
+    line-height: 1;
+    font-weight: var(--font-regular);
+    color:var(--color-body-text);
+    
+  }
+  
+  .header p {
+    font-size: 2rem;
+    color: var(--color-info);
+    font-style: italic;
+  }
+.quiz{
+    font-size: 2.8rem;
+    color:var(--color-body-text)
+}
+.quiz h2{
+  padding-block: 3rem;
+}
+  .answer-buttons{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 2rem;
+    color:var(--color-body-text);
+    padding-block: 3rem;
+  }
+  label{
+    color: inherit;
+    font-weight: var(--font-very-bold);
+  }
+
+  input[type="radio"]{
+    width: 20px;
+  height: 20px;
+  margin: 6px;
+  padding: 0;
+  border: 2px solid var(--radio-border-color);
+  border-radius: 50%;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+
+  }
+  input[type="radio"]:not(:disabled):checked {
+    border-color: var(--radio-checked-color);
+    background-color: var(--radio-checked-color);
+    background-clip: content-box;
+    padding: 2px;
+    background-image: radial-gradient(
+      circle,
+      var(--radio-checked-color) 0%,
+      var(--radio-checked-color) 50%,
+      transparent 60%,
+      transparent 100%
+    );
+  }
+  input[type="radio"]:disabled {
+    background-color: var(--radio-disabled-bg-color);
+  }
+  
+  input[type="radio"]:disabled:checked {
+    background-image: radial-gradient(
+    circle,
+    var(--radio-border-color) 0%,
+    var(--radio-border-color) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  }
+  input[type="radio"]:not(:disabled):hover {
+    background-color: var(--radio-hover-color);
+    outline: 6px solid var(--radio-hover-color);
+  }
+
+  button[type="submit"]{
+    background-color: var(--color-dark-purple);
+    color:var(--color-pure-white);
+    font-family: inherit;
+    font-size: 2.8rem;
+    padding: 2.2rem;
+    border-radius: 24px;
+    min-height: 50px;
+    width: 100%;
+    display: block;
+    font-weight:var(--font-semi-bold);
+    cursor:pointer;
+  }
